@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+flow.zip
+flow.skill
+.DS_Store

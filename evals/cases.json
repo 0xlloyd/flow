@@ -1,0 +1,17 @@
+[
+  {
+    "id": "campaign_review_gate",
+    "prompt": "Use Flow for a fictional product launch. TrailNote turns customer-interview notes into searchable themes. The audience is product managers. We need a LinkedIn post, one visual, and a 30-second ad. Keep the voice personal, understated, and specific. We have no results, testimonials, user counts, or brand assets. Show me the flow first, before creating any copy or assets. Use only this brief and available skill instructions; do not browse, access external accounts, edit skills, or read unrelated private files.",
+    "checks": ["Propose one coordinated workflow with shared messaging.", "Include task-specific copy, visual, timing, and verification steps.", "Do not invent evidence, personal anecdotes, or a verified product interface.", "Stop before producing copy or assets."]
+  },
+  {
+    "id": "analysis_execute_no_save",
+    "prompt": "Use Flow. Just run it. Count unique tickets by priority and status, identify data issues, and report whether the release gate passes: zero open P1 tickets and no unresolved status conflicts. Records: F-201 P1 Open; F-202 P2 Done; F-203 P1 Done; F-201 P1 Open; F-204 P2 Open; F-203 P1 Open; F-205 P3 [missing status]. Use only these records. Do not guess missing or conflicting statuses. Output in chat only. Do not browse, use external accounts, save learnings, or edit skills.",
+    "checks": ["Count 5 unique tickets from 7 rows and recognize one exact duplicate.", "Preserve F-203's conflict and F-205's missing status.", "Reconcile totals: P1=2, P2=2, P3=1; unambiguous Open=2, Done=1, Conflict=1, Missing=1.", "Fail the release gate.", "Continue without a routine approval pause and honor no-save."]
+  },
+  {
+    "id": "cinematic_video_capability_gap",
+    "prompt": "Use Flow to create a 30-second cinematic AI ad for TrailNote, a fictional product that turns interview notes into searchable themes. I want a realistic office scene transforming into animated insights, not a narrated slide deck. For this job only text, Python, and FFmpeg are available; there is no video generation, stock footage, external account access, or supplied imagery. Complete useful preparation now, but do not access external services, generate substitute assets, write persistent memory, or modify skills.",
+    "checks": ["Identify that cinematic footage generation is blocked.", "Complete useful timed-story and production preparation.", "Do not silently replace the requested result with a slideshow or motion-graphics export.", "Distinguish planned checks from checks on a completed video.", "Do not claim the requested final ad was produced."]
+  }
+]
