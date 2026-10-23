@@ -1,80 +1,57 @@
 # Flow
 
-**Design the workflow. Run the work. Keep what helps.**
+**Design the process the best practitioners would use. Run it. Keep it.**
 
-Flow is an AI skill that first works out how to approach a task, then follows that process through execution, verification, and useful learning.
+Flow is an AI skill for big tasks. Instead of pushing every task through the same fixed pipeline, it researches how experts actually do that kind of work, composes a task-specific workflow, runs it with approval gates, and saves the workflow to a library so the next similar task starts from a proven process.
 
-A campaign might need audience research, inspiration, copywriting, and visual direction. A video might need a storyboard, generated takes, selection, editing, and playback checks. A business case might need evidence, alternatives, criteria, and costings. Flow chooses the stages the task needs.
+A marketing piece needs references and a copy pass. A video needs a shot list and a review of takes. A business case needs criteria and costings. Flow works out which steps the task needs, and why.
 
-## Three acts
+## How a run works
 
-| Act | What happens |
+| Step | What happens |
 | --- | --- |
-| **Design the flow** | Frame the goal, find relevant existing skills, research expert methods, check available tools, and propose a task-specific sequence. |
-| **Run the flow** | Research the task, share a concrete plan, produce the deliverables, inspect the actual results, and repair failures. |
-| **Keep the flow** | Identify useful learning, improve a fitting skill or save a reusable task flow, and verify that it was actually saved. |
+| 1. Frame the task | Goal, audience, definition of done, constraints; played back for confirmation |
+| 2. Check the flow library | A saved flow that fits is run as the baseline; related ones lend parts |
+| 3. Research how the work is best done | Reframe the task as a top professional would, find the bar-setters, and research the stages and checks experts insist on |
+| 4. Compose the flow | Start from a six-step spine (Understand, Research, Plan, Execute, Verify, Learn), add modules, give each step a reason, a tool and a "done when" |
+| 5. Present the flow | A compact table for the user to approve, edit or reorder |
+| 6. Run the flow | Step by step, with a plan gate and options for judgement calls |
+| 7. Verify | Always runs: checks against done-when, the flow's checks and skill rules; opens what was made |
+| 8. Review the run | After-action review: intended, happened, why, change or repeat |
+| 9. Save the flow | One markdown file per task type in a library folder the user owns, merged with a dated changelog |
 
-Each meaningful step has a purpose, an output, and a **done when** condition. The flow describes the method; the plan describes what to make for this particular brief.
+Say **"just run it"** to skip the check-ins and stop only at the plan.
+
+## Built on
+
+- **Situational method engineering**: compose a method from stored pieces, chosen by the situation, and check it for consistency.
+- **Toyota standard work and kaizen**: the saved flow is the baseline; improvements edit the standard itself.
+- **After-action review**: four questions, causes not blame, keep what worked.
+- **Checklist design**: named pause points, short do-confirm lists of critical, easy-to-miss checks.
 
 ## Try it
 
-> Use Flow to turn this product brief into a launch campaign. Show me the flow first.
+> Use flow to build a launch campaign for this product brief.
 
-> Use Flow to analyze these records and recommend a release decision. Just run it. Don't save any learnings.
+> /flow — I need a business case for replacing our reconciliation tool.
 
-> Use Flow to create a 30-second video ad. Check production capabilities first, then plan the shots, produce the video, and verify playback.
-
-> Use Flow to build this business case. Let me review the flow and then the researched plan.
-
-## Control the pace
-
-| Request | Intended behavior |
-| --- | --- |
-| `Use Flow…` | Share the flow and plan, then continue authorized work. |
-| `Show me the flow first` | Stop after the proposed workflow, before production. |
-| `Review both` | Pause after the flow and again after the researched plan. |
-| `Just run it` | Make routine choices and continue, retaining necessary decisions and permission boundaries. |
-| `Don't save` | Make no persistent learning writes. |
-
-These instructions do not override the host's permissions or the user's current scope.
+> Use flow to make a 30-second product video. Just run it.
 
 ## Install
 
-The skill is the complete [`skills/flow`](skills/flow) folder. Keep its reference files alongside `SKILL.md`.
+The skill is the [`skills/flow`](skills/flow) folder. Keep `references/` alongside `SKILL.md`.
 
-- **Codex:** ask the skill installer to install `skills/flow` from this repository. See OpenAI's [current skill documentation](https://learn.chatgpt.com/docs/build-skills) for local installation and plugin distribution.
-- **Claude:** compress the `flow` folder into a ZIP, then upload it using the custom skill controls described in Anthropic's [current instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude). Compress the skill folder, not the entire repository.
-- **Other hosts:** use the host's supported skill-loading mechanism. The core instructions use ordinary Markdown and discover available capabilities at runtime.
+- **Claude:** zip the `flow` folder (not the whole repository) and upload it as a custom skill, following Anthropic's [instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+- **Other hosts:** use the host's skill-loading mechanism; the instructions are plain Markdown.
 
-After installation, ask **“Use Flow to…”**. Hosts that support explicit skill invocation may also offer `$flow` or `/flow`.
-
-Flow does not install integrations or grant access. Generation, browsing, artifact creation, memory, and durable skill writes depend on the host's available tools. When a required capability is missing, the instructions call for useful preparation and an explicit blocked state.
-
-## What gets retained
-
-Flow distinguishes reusable methods from personal context:
-
-- A useful sequence or check improves a matching flow, or becomes a new `flow-<task-type>` skill when justified.
-- A specialist correction belongs in that specialist skill.
-- An explicit durable preference or verified project fact belongs in an authorized context store.
-- A simulation, untested idea, or temporary state stays labeled as such.
-
-Saved flows include scope, inputs, steps, checks, dependencies, and validation status. They perform their jobs directly rather than recursively invoking Flow. Nothing is claimed as remembered or saved without a successful write.
+Flow works on its own. If the optional `go-deeper`, `best-in-class` or `session-self-learning` skills are installed, it uses them; otherwise it applies the same approach directly.
 
 ## Contents
 
 - [`skills/flow/SKILL.md`](skills/flow/SKILL.md): the operating instructions.
-- [`design-flow.md`](skills/flow/references/design-flow.md): optional stages and verification by medium.
-- [`retain-learning.md`](skills/flow/references/retain-learning.md): evidence, scope, and persistence rules.
-- [`saved-flow-template.md`](skills/flow/references/saved-flow-template.md): a template for reusable task flows.
-- [`evals/`](evals): fictional trial prompts and observed results.
+- [`references/flow-template.md`](skills/flow/references/flow-template.md): the format for saved flows.
+- [`references/modules.md`](skills/flow/references/modules.md): a menu of common steps to add to the spine.
 
-## Validation
+## Status
 
-The combined version passed structural validation and three isolated task trials on 20 October 2026: a campaign planning gate, a conflicting-record analysis, and a missing video-generation capability. See [the trial record](evals/results.md) for scope and limits.
-
-These trials check specific behaviors. They are not a benchmark of output quality, proof of improvement over either source version, or evidence of identical behavior across models. Claude installation and cross-host execution have not been tested for this combined version.
-
-## Background
-
-This version combines two iterations of the same Flow idea developed with Claude and Codex. It retains the three-act structure and task-specific modules, while adding explicit capability checks, output verification, configurable review gates, and evidence-based persistence. Personal names, project-specific preferences, and assumed platform-only tool names have been removed.
+Rebuilt in October 2026 sentence by sentence with its author. Live-run testing is still to come, so treat this version as unvalidated until a trial record is added.
