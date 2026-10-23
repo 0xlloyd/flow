@@ -51,7 +51,3 @@ Flow works on its own. If the optional `go-deeper`, `best-in-class` or `session-
 - [`skills/flow/SKILL.md`](skills/flow/SKILL.md): the operating instructions.
 - [`references/flow-template.md`](skills/flow/references/flow-template.md): the format for saved flows.
 - [`references/modules.md`](skills/flow/references/modules.md): a menu of common steps to add to the spine.
-
-## Status
-
-Rebuilt in October 2026 sentence by sentence with its author. Live-run testing is still to come, so treat this version as unvalidated until a trial record is added.
